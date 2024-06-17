@@ -7,15 +7,13 @@
     # The greatest increase in profits (date and amount) over the entire period
     # The greatest decrease in profits (date and amount) over the entire period
 
-
-
 # Module to import file paths across operating systems
 import os
 
 # Module for reading CSV files
 import csv
 
-# Set path for file
+# Set path for csv file
 csv_path=os.path.join('resources', 'budget_data.csv')
 
 # Create total months variable and set to 0
@@ -29,6 +27,9 @@ profit_loss = []
 
 # Create revenue change list
 revenue_change = []
+
+# Create months list
+months = []
 
 # Open csv file
 with open(csv_path) as csv_file:
@@ -51,6 +52,9 @@ with open(csv_path) as csv_file:
         # Append profit/loss list with Profit/Loss column values
         profit_loss.append(int(row[1]))
 
+        # Append months list with Date column values
+        months.append(str(row[0]))
+
     # Create loop to iterate through profit/loss list
     for i in range (1, len(profit_loss)):
 
@@ -60,8 +64,34 @@ with open(csv_path) as csv_file:
     # Calculate average revenue change
     revenue_average = sum(revenue_change) / len(revenue_change)
 
-    print(total)
-    print(net)
-    print("%.2f" % revenue_average)
-    #print(revenue_change)
-    #print(len(revenue_change))
+    # Calculate greatest increase in revenue
+    greatest_increase = max(revenue_change)
+
+    # Calculate greatest decrease in revenue
+    greatest_decrease = min(revenue_change)
+
+    # Calculate month with greatest increase
+    month_increase = months[revenue_change.index(max(revenue_change))+1]
+
+    # Calculate month with greatest decrease
+    month_decrease = months[revenue_change.index(min(revenue_change))+1]
+
+# Print results into terminal
+print("Financial Analysis")
+print("----------------------------")
+print(f'Total Months: {total}')
+print(f'Total: ${net}')
+print(f'Average Change: ${"%.2f" % revenue_average}')
+print(f'Greatest Increase in Profits: {month_increase} (${greatest_increase})')
+print(f'Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})')
+
+# Open text file
+with open(os.path.join('analysis','output.txt'), 'w') as output_file:
+    # Write results to text file
+    output_file.write("Financial Analysis\n" )
+    output_file.write("----------------------------\n")
+    output_file.write(f'Total Months: {total}\n')
+    output_file.write(f'Total: ${net}\n')
+    output_file.write(f'Average Change: ${"%.2f" % revenue_average}\n')
+    output_file.write(f'Greatest Increase in Profits: {month_increase} (${greatest_increase})\n')
+    output_file.write(f'Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})\n')
