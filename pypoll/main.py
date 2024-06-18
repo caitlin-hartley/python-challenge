@@ -63,16 +63,6 @@ for i in vote_count:
 # Calculate winner with max number of votes
 winner = candidate[vote_count.index(max(vote_count))]
 
-
-
-#print(candidates)
-#print(candidate_vote)
-#print (candidate)
-#print (vote_count)
-#print(vote_percentages)
-#print(candidate[0])
-#print(winner)
-
 # Print results into terminal
 print('Election Results')
 print('-------------------------')
