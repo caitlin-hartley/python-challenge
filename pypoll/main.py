@@ -46,10 +46,10 @@ with open(csv_path) as csv_file:
         if row[2] not in candidates:
             candidates.append(row[2])
 
-            # Set candidate vote dictionary to 0
+            # Set candidate vote dictionary to 0 for each unique candidate (resets)
             number_of_votes[row[2]] = 0
         
-        # Add a vote to that candidate's count in dictionary
+        # Sum votes for each candidate
         number_of_votes[row[2]] += 1
 
 # Split dictionary into candidate name and vote count
