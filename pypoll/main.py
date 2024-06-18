@@ -22,7 +22,7 @@ total_votes = 0
 candidates = []
 
 # Create dictionary for number of votes for each candidate
-candidate_vote={}
+number_of_votes = {}
 
 # Create list for vote percentages
 vote_percentages =[]
@@ -47,13 +47,13 @@ with open(csv_path) as csv_file:
             candidates.append(row[2])
 
             # Set candidate vote dictionary to 0
-            candidate_vote[row[2]] = 0
+            number_of_votes[row[2]] = 0
         
         # Add a vote to that candidate's count in dictionary
-        candidate_vote[row[2]] += 1
+        number_of_votes[row[2]] += 1
 
 # Split dictionary into candidate name and vote count
-candidate, vote_count = zip(*candidate_vote.items())
+candidate, vote_count = zip(*number_of_votes.items())
 
 # Calculate percentage of votes for each candidate
 for i in vote_count:
