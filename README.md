@@ -12,8 +12,8 @@
         # The greatest increase in profits (date and amount) over the entire period
         # The greatest decrease in profits (date and amount) over the entire period
 
-        # Credit to stack overflow for helping to find row - previous row calculation
-        # Credit to stack overflow to use another values index to find value in another list
+        # Credit to stack overflow for helping to implement row - previous row calculation
+        # Credit to stack overflow to use indexing of one list to find value in another list
         
 # ----------------------------------------------------------------------
 
