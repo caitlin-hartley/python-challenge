@@ -55,7 +55,8 @@
         # The total number of votes each candidate won
         # The winner of the election based on popular vote
 
-        # Credit to stack overflow for helping to calculate values based on list of keys for dictionary
+        # Credit to stack overflow for helping to calculate unique list of values for candidates
+        # Credit to stack overflow for helping to increment values in dictionary
         # Credit to stack overflow for helping to split dictionary into two lists using zip
 
 # ----------------------------------------------------------------------
