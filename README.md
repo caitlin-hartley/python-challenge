@@ -12,6 +12,9 @@
         # The greatest increase in profits (date and amount) over the entire period
         # The greatest decrease in profits (date and amount) over the entire period
 
+        # Credit to stack overflow for helping to find row - previous row calculation
+        # Credit to stack overflow to use another values index to find value in another list
+        
 # ----------------------------------------------------------------------
 
 # First Challenge Script Description:
@@ -51,6 +54,9 @@
         # The percentage of votes each candidate won
         # The total number of votes each candidate won
         # The winner of the election based on popular vote
+
+        # Credit to stack overflow for helping to calculate values based on list of keys for dictionary
+        # Credit to stack overflow for helping to split dictionary into two lists using zip
 
 # ----------------------------------------------------------------------
 
