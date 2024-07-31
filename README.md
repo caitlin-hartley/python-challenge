@@ -1,6 +1,6 @@
 # python-challenge
 
-# ----------------------------------------------------------------------
+----------------------------------------------------------------------
 # First Challenge Overview:
 
     # Python script to analyze the financial records of company
@@ -15,7 +15,7 @@
         # Credit to stack overflow for helping to implement row - previous row calculation
         # Credit to stack overflow to use indexing of one list to find value in another list
         
-# ----------------------------------------------------------------------
+----------------------------------------------------------------------
 
 # First Challenge Script Description:
 
